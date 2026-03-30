@@ -1,0 +1,1093 @@
+/* =============================================================================
+   Op Strength — Global Styles
+   Dark theme, mobile-first, large touch targets.
+   ============================================================================= */
+
+/* --- CSS Custom Properties --- */
+:root {
+  --bg: #1a1a2e;
+  --bg-card: #16213e;
+  --bg-input: #0f3460;
+  --accent: #0f3460;
+  --accent-light: #1a4b8c;
+  --text: #e0e0e0;
+  --text-muted: #8a8a9a;
+  --text-dim: #6a6a7a;
+  --green: #4caf50;
+  --green-dark: #388e3c;
+  --yellow: #ffeb3b;
+  --yellow-dark: #f9a825;
+  --orange: #ff9800;
+  --orange-dark: #e65100;
+  --red: #f44336;
+  --red-dark: #c62828;
+  --blue: #2196f3;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --transition: 0.2s ease;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  padding-bottom: 80px;
+}
+
+/* --- Screen Container --- */
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.app-title {
+  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+}
+
+.screen-title {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.screen-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* --- Cards --- */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  touch-action: manipulation;
+  min-height: 44px;
+  min-width: 44px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--green);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+}
+
+.btn-primary:disabled {
+  background: var(--text-dim);
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--accent);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-light);
+}
+
+.btn-large {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1.1rem;
+  border-radius: var(--radius);
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+/* --- Input Fields --- */
+.input-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  margin-top: 12px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-input);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 1rem;
+  font-family: var(--font);
+  min-height: 44px;
+  transition: border-color var(--transition);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.input-field::placeholder {
+  color: var(--text-dim);
+}
+
+.textarea-field {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* --- Scale Selector (1-5 buttons) --- */
+.scale-selector {
+  margin: 8px 0;
+}
+
+.scale-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.scale-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.scale-btn {
+  flex: 1;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px 4px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  touch-action: manipulation;
+  text-align: center;
+}
+
+.scale-btn:active {
+  transform: scale(0.95);
+}
+
+.scale-btn.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+/* --- Number Stepper --- */
+.number-stepper {
+  margin: 8px 0;
+}
+
+.stepper-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.stepper-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepper-btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 8px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  touch-action: manipulation;
+}
+
+.stepper-btn:active {
+  transform: scale(0.95);
+  background: var(--accent-light);
+}
+
+.stepper-btn.minus {
+  color: var(--orange);
+}
+
+.stepper-btn.plus {
+  color: var(--green);
+}
+
+.stepper-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* =============================================================================
+   Home Screen
+   ============================================================================= */
+
+.home-header {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.home-date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.day-card {
+  padding: 20px;
+}
+
+.day-title {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.exercise-preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exercise-preview-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.exercise-preview-row:last-child {
+  border-bottom: none;
+}
+
+.exercise-preview-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.exercise-preview-detail {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.start-session-btn {
+  margin-top: 12px;
+}
+
+/* Rest Day */
+.rest-day-card {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.rest-day-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.rest-day-title {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.rest-day-message {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Home Nav */
+.home-nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.nav-link {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text);
+  transition: background var(--transition);
+  min-height: 44px;
+}
+
+.nav-link:hover {
+  background: var(--accent);
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+}
+
+.nav-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* =============================================================================
+   Readiness Screen
+   ============================================================================= */
+
+.readiness-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.readiness-card {
+  padding: 14px 16px;
+}
+
+/* Readiness Result */
+.readiness-result-card {
+  text-align: center;
+  padding: 24px;
+}
+
+.readiness-score {
+  margin-bottom: 12px;
+}
+
+.score-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.status-green {
+  background: var(--green);
+  color: #fff;
+}
+
+.status-yellow {
+  background: var(--yellow);
+  color: #222;
+}
+
+.status-orange {
+  background: var(--orange);
+  color: #222;
+}
+
+.status-red {
+  background: var(--red);
+  color: #fff;
+}
+
+.readiness-modifiers {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.modifier-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.modifier-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.modifier-value {
+  font-weight: 600;
+}
+
+.readiness-message {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.readiness-message.status-yellow {
+  background: rgba(255, 235, 59, 0.15);
+  color: var(--yellow);
+}
+
+.readiness-message.status-orange {
+  background: rgba(255, 152, 0, 0.15);
+  color: var(--orange);
+}
+
+.readiness-message.status-red {
+  background: rgba(244, 67, 54, 0.15);
+  color: var(--red);
+}
+
+/* Exercise Swaps */
+.exercise-swaps {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.exercise-swaps h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.swap-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.swap-from {
+  text-decoration: line-through;
+  color: var(--red);
+}
+
+.swap-arrow {
+  color: var(--text-muted);
+}
+
+.swap-to {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.swap-reason {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+.warning-card {
+  border-left: 4px solid var(--red);
+  padding: 16px;
+}
+
+/* =============================================================================
+   Session Screen
+   ============================================================================= */
+
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-progress {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.session-readiness-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.readiness-score-small {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.session-exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Exercise Card */
+.exercise-card {
+  border-left: 4px solid var(--accent);
+  transition: border-color var(--transition);
+}
+
+.exercise-card.active {
+  border-left-color: var(--green);
+}
+
+.exercise-card.complete {
+  border-left-color: var(--text-dim);
+  opacity: 0.75;
+}
+
+.exercise-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.exercise-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.recovery-badge {
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.recovery-stretcher {
+  background: rgba(244, 67, 54, 0.2);
+  color: var(--red);
+}
+
+.recovery-activator {
+  background: rgba(255, 152, 0, 0.2);
+  color: var(--orange);
+}
+
+.recovery-pumper {
+  background: rgba(76, 175, 80, 0.2);
+  color: var(--green);
+}
+
+.exercise-target {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+/* Set Dots */
+.set-dots {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.set-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: background var(--transition);
+}
+
+.set-dot.filled {
+  background: var(--green);
+}
+
+.set-dot.empty {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Sets Log */
+.sets-log {
+  margin-bottom: 10px;
+}
+
+.set-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  font-size: 0.85rem;
+}
+
+.set-detail {
+  color: var(--text);
+}
+
+.set-e1rm {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.log-set-btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Joint Pain Prompt */
+.joint-pain-prompt {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.joint-pain-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Exercise Complete Mark */
+.exercise-complete-mark {
+  text-align: center;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+.finish-btn {
+  margin-top: 20px;
+}
+
+/* =============================================================================
+   Set Logger
+   ============================================================================= */
+
+.set-logger {
+  background: rgba(15, 52, 96, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin-top: 8px;
+}
+
+.set-logger-header {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.set-logger-section {
+  margin-bottom: 16px;
+}
+
+.set-logger-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.set-logger-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.weight-controls .input-field {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  flex: 1;
+}
+
+.reps-controls .input-field {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  flex: 1;
+}
+
+/* RPE Buttons */
+.rpe-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rpe-btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 8px 6px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  touch-action: manipulation;
+  flex: 1;
+  text-align: center;
+}
+
+.rpe-btn:active {
+  transform: scale(0.95);
+}
+
+.rpe-btn.active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+.save-set-btn {
+  margin-top: 8px;
+}
+
+/* =============================================================================
+   Timer Overlay
+   ============================================================================= */
+
+.timer-container {
+  position: relative;
+}
+
+.timer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 46, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.timer-label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+
+.timer-display {
+  font-size: 5rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: var(--text);
+  transition: color var(--transition);
+}
+
+.timer-display.timer-done {
+  color: var(--green);
+}
+
+.timer-hint {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+/* =============================================================================
+   Feedback Screen
+   ============================================================================= */
+
+.muscle-feedback-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.muscle-feedback-card {
+  padding: 14px 16px;
+}
+
+.muscle-name {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.session-feedback-card {
+  padding: 16px;
+}
+
+/* Session Complete */
+.session-complete {
+  text-align: center;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.complete-icon {
+  font-size: 4rem;
+  color: var(--green);
+  line-height: 1;
+}
+
+.complete-title {
+  font-size: 1.5rem;
+}
+
+.session-summary {
+  width: 100%;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-value {
+  font-weight: 700;
+}
+
+/* =============================================================================
+   Nutrition Screen
+   ============================================================================= */
+
+.nutrition-card {
+  padding: 16px;
+}
+
+.compliance-display {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.compliance-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.compliance-row:last-child {
+  border-bottom: none;
+}
+
+.compliance-label {
+  font-weight: 500;
+  flex: 1;
+}
+
+.compliance-values {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: right;
+  margin-right: 12px;
+}
+
+.compliance-pct {
+  font-weight: 700;
+  min-width: 48px;
+  text-align: right;
+}
+
+.compliance-good {
+  color: var(--green);
+}
+
+.compliance-ok {
+  color: var(--yellow);
+}
+
+.compliance-low {
+  color: var(--red);
+}
+
+/* Status Messages */
+.status-message {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.status-success {
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--green);
+}
+
+.status-error {
+  background: rgba(244, 67, 54, 0.15);
+  color: var(--red);
+}
+
+.nutrition-status {
+  min-height: 0;
+}
+
+/* =============================================================================
+   Export Screen
+   ============================================================================= */
+
+.export-stats-card,
+.export-card,
+.import-card {
+  padding: 16px;
+}
+
+.card-description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  color: var(--text-muted);
+}
+
+.stat-value {
+  font-weight: 600;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  cursor: pointer;
+}
+
+.empty-message {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 12px;
+}
+
+.error-message {
+  color: var(--red);
+  font-size: 0.9rem;
+}
+
+/* =============================================================================
+   Utility
+   ============================================================================= */
+
+/* Ensure inputs use the right color scheme */
+input[type="number"],
+input[type="date"],
+input[type="text"],
+textarea {
+  color-scheme: dark;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide number input spinners on mobile for cleaner look */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Safe area insets for notched phones */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  #app {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}

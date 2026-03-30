@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.vite/
+*.local
+
+# Python
+ml/.venv/
+ml/venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.eggs/
+
+# Data exports (contain personal training data)
+data/exports/
+
+# Model artifacts
+ml/src/op_strength/models/artifacts/
+
+# OS
+.DS_Store
+Thumbs.db

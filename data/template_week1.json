@@ -1,0 +1,305 @@
+{
+  "days": [
+    {
+      "dayId": "A",
+      "dayNumber": 1,
+      "label": "Squat Focus",
+      "sessionType": "heavy",
+      "exercises": [
+        {
+          "exerciseId": "heel_elevated_squat",
+          "sets": 3,
+          "repRange": "4-6",
+          "targetRPE": 7.5,
+          "targetRIR": 3,
+          "restSec": 180,
+          "notes": ""
+        },
+        {
+          "exerciseId": "machine_shoulder_press",
+          "sets": 3,
+          "repRange": "8-10",
+          "targetRPE": 7,
+          "targetRIR": 3,
+          "restSec": 120,
+          "notes": ""
+        },
+        {
+          "exerciseId": "chest_supported_row",
+          "sets": 3,
+          "repRange": "8-10",
+          "targetRPE": 7.5,
+          "targetRIR": 3,
+          "restSec": 120,
+          "notes": ""
+        },
+        {
+          "exerciseId": "lateral_raise",
+          "sets": 3,
+          "repRange": "12-15",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 75,
+          "notes": ""
+        },
+        {
+          "exerciseId": "standing_calf_raise",
+          "sets": 3,
+          "repRange": "10-12",
+          "targetRPE": 8.5,
+          "targetRIR": 3,
+          "restSec": 90,
+          "notes": ""
+        },
+        {
+          "exerciseId": "cable_crunch",
+          "sets": 2,
+          "repRange": "12-15",
+          "targetRPE": 7.5,
+          "targetRIR": 3,
+          "restSec": 75,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "dayId": "B",
+      "dayNumber": 2,
+      "label": "Bench Focus",
+      "sessionType": "heavy",
+      "exercises": [
+        {
+          "exerciseId": "barbell_bench_press",
+          "sets": 3,
+          "repRange": "4-6",
+          "targetRPE": 7.5,
+          "targetRIR": 3,
+          "restSec": 180,
+          "notes": ""
+        },
+        {
+          "exerciseId": "lat_pulldown_neutral",
+          "sets": 3,
+          "repRange": "8-10",
+          "targetRPE": 7.5,
+          "targetRIR": 3,
+          "restSec": 120,
+          "notes": ""
+        },
+        {
+          "exerciseId": "seated_leg_curl",
+          "sets": 3,
+          "repRange": "10-12",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 90,
+          "notes": ""
+        },
+        {
+          "exerciseId": "incline_db_curl",
+          "sets": 3,
+          "repRange": "10-12",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 90,
+          "notes": ""
+        },
+        {
+          "exerciseId": "face_pull",
+          "sets": 2,
+          "repRange": "15-20",
+          "targetRPE": 7,
+          "targetRIR": 3,
+          "restSec": 75,
+          "notes": ""
+        },
+        {
+          "exerciseId": "hanging_leg_raise",
+          "sets": 2,
+          "repRange": "8-12",
+          "targetRPE": 7.5,
+          "targetRIR": 3,
+          "restSec": 75,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "dayId": "C",
+      "dayNumber": 3,
+      "label": "Hypertrophy",
+      "sessionType": "moderate",
+      "exercises": [
+        {
+          "exerciseId": "leg_press",
+          "sets": 3,
+          "repRange": "8-10",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 120,
+          "notes": ""
+        },
+        {
+          "exerciseId": "romanian_deadlift",
+          "sets": 3,
+          "repRange": "8-10",
+          "targetRPE": 7.5,
+          "targetRIR": 3,
+          "restSec": 180,
+          "notes": ""
+        },
+        {
+          "exerciseId": "cable_fly",
+          "sets": 3,
+          "repRange": "10-12",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 75,
+          "notes": ""
+        },
+        {
+          "exerciseId": "lateral_raise",
+          "sets": 3,
+          "repRange": "12-15",
+          "targetRPE": 8.5,
+          "targetRIR": 3,
+          "restSec": 75,
+          "notes": ""
+        },
+        {
+          "exerciseId": "overhead_tricep_extension",
+          "sets": 2,
+          "repRange": "10-12",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 90,
+          "notes": ""
+        },
+        {
+          "exerciseId": "seated_calf_raise",
+          "sets": 3,
+          "repRange": "12-15",
+          "targetRPE": 8.5,
+          "targetRIR": 3,
+          "restSec": 75,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "dayId": "D",
+      "dayNumber": 4,
+      "label": "Upper Focus",
+      "sessionType": "moderate",
+      "exercises": [
+        {
+          "exerciseId": "incline_db_press_neutral",
+          "sets": 3,
+          "repRange": "8-10",
+          "targetRPE": 7.5,
+          "targetRIR": 3,
+          "restSec": 120,
+          "notes": ""
+        },
+        {
+          "exerciseId": "chest_supported_row",
+          "sets": 3,
+          "repRange": "8-10",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 120,
+          "notes": ""
+        },
+        {
+          "exerciseId": "leg_extension",
+          "sets": 2,
+          "repRange": "10-12",
+          "targetRPE": 8.5,
+          "targetRIR": 3,
+          "restSec": 75,
+          "notes": ""
+        },
+        {
+          "exerciseId": "ez_bar_curl",
+          "sets": 3,
+          "repRange": "8-10",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 90,
+          "notes": ""
+        },
+        {
+          "exerciseId": "rear_delt_fly",
+          "sets": 2,
+          "repRange": "12-15",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 75,
+          "notes": ""
+        },
+        {
+          "exerciseId": "lateral_raise",
+          "sets": 3,
+          "repRange": "12-15",
+          "targetRPE": 8.5,
+          "targetRIR": 3,
+          "restSec": 75,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "dayId": "E",
+      "dayNumber": 5,
+      "label": "Full Body Moderate",
+      "sessionType": "light",
+      "exercises": [
+        {
+          "exerciseId": "heel_elevated_squat",
+          "sets": 2,
+          "repRange": "6-8",
+          "targetRPE": 6.5,
+          "targetRIR": 3,
+          "restSec": 180,
+          "notes": ""
+        },
+        {
+          "exerciseId": "barbell_bench_press",
+          "sets": 2,
+          "repRange": "6-8",
+          "targetRPE": 6.5,
+          "targetRIR": 3,
+          "restSec": 180,
+          "notes": ""
+        },
+        {
+          "exerciseId": "lat_pulldown_neutral",
+          "sets": 3,
+          "repRange": "8-10",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 120,
+          "notes": ""
+        },
+        {
+          "exerciseId": "seated_leg_curl",
+          "sets": 2,
+          "repRange": "10-12",
+          "targetRPE": 8,
+          "targetRIR": 3,
+          "restSec": 90,
+          "notes": ""
+        },
+        {
+          "exerciseId": "standing_calf_raise",
+          "sets": 3,
+          "repRange": "10-12",
+          "targetRPE": 9,
+          "targetRIR": 3,
+          "restSec": 90,
+          "notes": ""
+        }
+      ]
+    }
+  ]
+}
